@@ -2,14 +2,14 @@
     <div class="footer-container text-center">
       <div class="row">
         <div class="col social-links-container">
-          {% if site.show_social_icons %}
+          {% if site.show_social_icons and page.id != 'index'  %}
             {% include social_links.html %}
           {% endif %}
         </div>
       </div>
       <div class="row">
         <div class="col copyright" onclick="location.href='https://github.com/Durishn/Durishn.github.io';">
-          All content copyright Nic Durish &copy; {{ site.time | date: '%Y' }}.
+          Made with ❤ by Nic Durish &copy; {{ site.time | date: '%Y' }}.
         </div>
       </div>
     </div>

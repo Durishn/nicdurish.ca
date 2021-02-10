@@ -1,0 +1,86 @@
+			<section id="contact" data-background-color="rgba(var(--color-splash-background4), 1)" style="padding-bottom: 5%;">
+				<div id="particles-js2" class="fixedbg bg4"></div>
+				<div class="section-content-wrapper">
+					<div class="title-holder">
+						<span class="pre-sec-title">--- Want to collaborate?</span>
+						<h2>Let's chat!</h2>
+					</div>
+					<div class="sec-content-holder">
+						<p style="margin-bottom:3%">Have a project you'd like to discuss? A question that you'd like answered? Or perhaps you'd just like to say hello? Whatever it may be, let's explore it.</p>
+						<div class="contact-content gr-md-7-3">
+							<div class="form-wrapper">
+
+                                <form id="contact-form" class="form contact-form" action="https://getform.io/f/adc79fcc-3ba3-4213-b0af-c044092b0936" method="POST" role="form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name?" tabindex="1" required>
+                                    </div>                            
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your email?" tabindex="2" required>
+                                    </div>                                               
+                                    <div class="form-group">
+                                        <label class="form-label" for="message">Message</label>
+                                        <textarea rows="3" cols="50" type="text" name="message" class="form-control" id="message" placeholder="How can I help you?" tabindex="4" required></textarea>                                 
+                                    </div>
+                                    <div class="form-group privacy-label">
+                                        <input type="checkbox" id="privacy" name="privacy" value="True" required>
+                                        <label for="privacy" > I have read and accept the <a id="mymodalBtn">Privacy Policy</a></label><br>
+                                    </div>
+                                    <div class="button-container">
+                                        <button href="/resume" type="submit" class="btn btn-surround">
+                                            <svg>
+                                                <rect x="0" y="0" fill="none" width="100%" height="100%" rx="3px" ry="3px"/>
+                                            </svg>
+                                            <span class="fas fa-paper-plane"></span>&nbsp;&nbsp;Send Message
+                                        </button>
+                                    </div>
+                                    <div class="privacy-statement"><span>The collection of data in this form is exclusively to return your message and has no commercial purpose.</span><!-- Trigger/Open The Modal -->
+                                    </div>
+                                </form>
+
+
+                                <!-- The Modal -->
+                                <div id="myModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div id="modal-wrapper">
+                                        <div class="modal-content">
+                                            <span class="modalclose">&times;</span>
+                                            {% include privacy-policy.html %}
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                            <span></span>
+                            <div class="social-links-wrapper">
+                                <div class="social-links">
+                                        <span style="color:rgba({{ site.availability_color }},1)">
+                                            <span class="far {{ site.availability_icon }}" style="color:rgba({{ site.availability_color }},1)"></span>&nbsp;•&nbsp;&nbsp;&nbsp;{{ site.availability_status }}
+                                        </span>
+                                    {%if site.email %}
+                                        <a rel="noopener" target="_blank" aria-label="Mail" href="mailto:{{ site.email }}">
+                                            <span class="fa fa-envelope" ></span>&nbsp;•&nbsp;&nbsp;&nbsp;{{ site.email }}
+                                        </a>
+                                    {%endif%}
+                                    <a rel="noopener" target="_blank" aria-label="Guelph, Ontario" href="https://www.google.com/maps/place/Guelph,+ON/@43.5346633,-80.2732033,14642m/data=!3m1!1e3!4m5!3m4!1s0x882b9ad0c3a9fb6b:0x5037b28c7231b60!8m2!3d43.5448048!4d-80.2481666">
+                                        <span class="fas fa-map-marker-alt"></span>&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Guelph, Ontario
+                                    </a>
+                                    {%if site.linkedin_username %}
+                                    <a rel="noopener" target="_blank" aria-label="LinkedIn" href="http://linkedin.com/in/{{ site.linkedin_username }}">
+                                        <span class="fab fa-linkedin"></span>&nbsp;•&nbsp;&nbsp;&nbsp;/in/{{ site.linkedin_username }}
+                                    </a>
+                                    {%endif%}
+                                    {%if site.github_username %}
+                                    <a rel="noopener" target="_blank" aria-label="GitHub" href="https://github.com/{{ site.github_username }}">
+                                        <span class="fab fa-github"></span>&nbsp;•&nbsp;&nbsp;&nbsp;{{ site.github_username }}
+                                    </a>
+                                    {%endif%}
+                                </div>
+                            </div>
+						</div>
+					</div>	
+				</div>
+			</section>

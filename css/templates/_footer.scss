@@ -1,0 +1,68 @@
+/*
+    CSS for Footer of NicDurish.org
+    Author: Nic Durish
+    Date: 2019
+
+    Feel free to use some of this code :) However if you use ALL of it, please reference me
+*/
+
+.footer {
+	position: relative;
+	background-color: rgba(var(--color-splash-bar));
+	margin-top: -7px;
+}
+.default-body footer{
+	    padding-left: 0px;
+}
+
+
+
+.footer-container{
+	max-width: 90vw;
+	margin: auto;
+
+	.row{
+	margin: 7px;
+	}
+}
+
+.index-footer {
+	position: fixed;
+	padding: 0px;
+	padding-bottom: 15px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index:1;
+}
+
+footer {
+	padding-left: 240px;
+	text-align: center;
+	.social-links-container{
+	margin-top:5px;
+}
+
+.social-links {
+	a i {
+		text-decoration: none;
+		margin: 10px;
+	}
+	.fab, .fa, .fas{
+		margin-top:20px;
+		font-size: 1.5em;
+	}
+}
+
+.copyright {
+	color: rgba(255, 255, 255, 0.60);
+	font-size:0.65rem;
+	padding-bottom: 5px;
+	cursor: pointer
+}
+
+.copyright:hover {
+	color: white;
+}
+}

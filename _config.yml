@@ -5,6 +5,9 @@ author: Nic Durish
 description: "Nic Durish is a web developer and designer based out of Guelph, Ontario. This site serves as his personal hub on the web. You'll find a bit of professional content, some pages where a stage my living documents and some occasional ramblings."
 url: "https://nicdurish.ca"
 timezone: Canada/Eastern
+language: "en"
+lang_direction: "ltr"
+color: "#152335"
 
 # Plugins
 plugins:
@@ -21,17 +24,46 @@ sass:
   sass_dir: css
   style: compressed
 
+availability_status: Open to new projects
+availability_icon: fa-smile
+availability_color: "96, 202, 155"
 
 # Social icons
 show_social_icons: true
-facebook_username: ndurish
-linkedin_username: nicdurish
+# facebook_username: ndurish
+linkedin_username: NicDurish
 github_username: Durishn
-instagram_username: nicdurish
+# instagram_username: nicdurish
 twitter_username: durishn
-couchsurfing_username: ndurish
-spotify_username: durishn
-youtube_username: NicDurish
+# couchsurfing_username: ndurish
+# spotify_username: durishn
+# youtube_username: NicDurish
+
+our_services:
+  - name: "Full-stack Web Development"
+    image: "fas fa-code"
+    description: "LAMP stacks, MEAN stacks, and JAMstacks. Oh My! From the frontend to the backend tools to the database, and everything in-between."
+
+  - name: 'Digital Product Design'
+    image: 'fas fa-drafting-compass'
+    description: "Clean, simple, and modern designs - optimized for performance, maintainability, and convertings users to customers."
+
+  - name: 'Consultancy & Training'
+    image: 'fas fa-chart-pie'
+    description: 'Get the extra push your project needs. I provide on or off-site training, consultation, and management to any projects large or small'
+
+  - name: 'Analytics & Audits'
+    image: 'fas fa-chart-pie'
+    description: 'Get insights into your web product so that you can improve performance, SEO, click-through and ultimately make smarter business decisions.'
+
+  - name: 'Service Integration'
+    image: 'fas fa-cogs'
+    description: 'Get your product integrated with external servers, services, APIs, content management systems and databases. Or have some tailor-made!'
+
+  - name: 'Accessibility & Usability'
+    image: 'fas fa-universal-access'
+    description: "Don't just be WCAG-compliant, elevate your product or service to new levels by prioritizing accessibility to all of your users across all platforms."
+
 
 # Google Analytics
 google_analytics: UA-135084842-1

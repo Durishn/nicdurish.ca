@@ -2,8 +2,8 @@
 <html lang="en">
 	{% include head.html %}
 	<body class="fixedheader-body">
-  		{% include header.html %}
-  		<div class="fixed-nav-div"></div>
+  		{% include nav-aux.html %}
+  		<div class="fixed-nav-div affix"></div>
 
       <div class="holds-the-iframe">
       	<object class= "fullpdf" data={{page.pdflink}}>
@@ -19,10 +19,14 @@
       
   </body>
 
-</html>
-
+  {% include tail.html %}
 <script>
   $(".nav").each(function() {
-    $(this).addClass("fixed-nav");
+    $(this).addClass("affix");
     });
 </script>
+
+</html>
+
+
+

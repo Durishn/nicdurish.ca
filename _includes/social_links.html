@@ -1,49 +1,65 @@
 <div class="social-links">
 
 	<!-- Email -->
+	{%if site.email %}
 	<a rel="noopener" target="_blank" aria-label="Mail" href="mailto:{{ site.email }}">
 		<span class="fa fa-envelope" ></span>
 	</a>
+{%endif%}
 
-	<!-- Facebook
+	<!-- Facebook -->
+	{%if site.facebook_username %}
 	<a rel="noopener" target="_blank" aria-label="Facebook" href="https://facebook.com/{{ site.facebook_username }}">
 		<span class="fab fa-facebook"></span>
-	</a>-->
+	</a>
+	{%endif%}
 
 	<!-- LinkedIn -->
+	{%if site.linkedin_username %}
 	<a rel="noopener" target="_blank" aria-label="LinkedIn" href="http://linkedin.com/in/{{ site.linkedin_username }}">
 		<span class="fab fa-linkedin"></span>
 	</a>
+{%endif%}
 
 	<!-- Twitter -->
+	{%if site.twitter_username %}
 	<a rel="noopener" target="_blank" aria-label="Twitter" href="https://twitter.com/{{ site.twitter_username }}">
 		<span class="fab fa-twitter-square"></span>
 	</a>
+{%endif%}
 
 	<!-- Instagram -->
+	{%if site.instagram_username %}
 	<a rel="noopener" target="_blank" aria-label="Instagram" href="https://instagram.com/{{ site.instagram_username }}">
 		<span class="fab fa-instagram"></span>
 	</a>
+	{%endif%}
 
-	<!-- Couchsurfing
+	<!-- Couchsurfing -->
+	{%if site.couchsurfing_username %}
 	<a rel="noopener" target="_blank" aria-label="CouchSurfing" href="https://couchsurfing.com/people/{{ site.couchsurfing_username }}">
 		<span class="fas fa-couch"></span>
-	</a>-->
+	</a>
+	{%endif%}
 
-	<!-- Spotify
+	<!-- Spotify -->
+	{%if site.spotify_username %}
 	<a rel="noopener" target="_blank" aria-label="Spotify" href="https://open.spotify.com/user/{{ site.spotify_username }}">
 		<span class="fab fa-spotify"></span>
-	</a> -->
+	</a> 
+	{%endif%}
 
 	<!-- Youtube -->
+	{%if site.youtube_username %}
 	<a rel="noopener" target="_blank" aria-label="Youtube" href="https://www.youtube.com/user/{{ site.youtube_username }}">
 		<span class="fab fa-youtube"></span>
 	</a>
+{%endif%}
 
 	<!-- GitHub -->
+	{%if site.github_username %}
 	<a rel="noopener" target="_blank" aria-label="GitHub" href="https://github.com/{{ site.github_username }}">
 		<span class="fab fa-github"></span>
 	</a>
+	{%endif%}
 </div>
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></link>

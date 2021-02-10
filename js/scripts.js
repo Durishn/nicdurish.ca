@@ -1,19 +1,81 @@
-$(".read-more").click(function(){
-  var me = $(this).toggleClass("open"),
-      txt = me.is('.open') ? 'Hide' : 'Read More';
-  $(me.attr("href")).toggleClass("active");
-  me.text(txt);
-}); 
+/*****************
+* Navbar Active Items
+*****************/
+$(document).ready(function () {
+  if ($(document).scrollTop() < 50) {
+    $("#welcome").addClass("activeSec");
+  }
+  var lastId,
+    topMenu = $("#menu"),
+    menuItems = topMenu.find("a"),
+    scrollItems = menuItems.map(function () {
+      var item = $($(this).attr("href"));
+      if (item.length) {
+        return item;
+      }
+    });
+  menuItems.click(function (e) {
+    var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top;
+    $("html, body").stop().animate(
+      {
+        scrollTop: offsetTop,
+      });
+    e.preventDefault();
+  });
+  $(window).scroll(function () {
+    var fromTop = $(this).scrollTop();
+    var cur = scrollItems.map(function () {
+      if ($(this).offset().top <= fromTop + 320) {
+        return this;
+      }
+    });
+    cur = cur[cur.length - 1];
+    var id = cur && cur.length ? cur[0].id : "";
+
+    if (lastId !== id) {
+      lastId = id;
+      menuItems
+        .parent()
+        .removeClass("active")
+        .end()
+        .filter("[href='#" + id + "']")
+        .parent()
+        .addClass("active");
+
+      $("section").removeClass("activeSec");
+      $("#" + id).addClass("activeSec");
+      var color = $("#" + id).attr("data-background-color");
+      $(".content-wrapper").css("background-color", color);
+      var r = document.querySelector(":root");
+      
+      style.setProperty('--color-splash-secondary', pink);
+      // $("li.active").css("background-color", color);
+    }
+  });
+});
+
 
 /*****************
-* Navbar Animation
+* Particle non-interactive
+*****************/
+// $(window).scroll(function() {
+//    if ($(document).scrollTop() < 250) {
+//     $(".particles-js-canvas-el").removeClass("negz");
+//    } else{
+//     $(".particles-js-canvas-el").addClass("negz");
+//    }
+// });
+
+/*****************
+* Navbar Affix on Scroll
 *****************/
 $(window).scroll(function() {
   var ww = document.body.clientWidth;
   if ($(document).scrollTop() > 50) {
-      $('.nav').addClass('affix');
+      $('nav').addClass('affix');
   } else {
-      $('.nav').removeClass('affix');
+      $('nav').removeClass('affix');
   }
 });
 
@@ -36,58 +98,25 @@ $(window).scroll(function() {
 
 
 /*****************
-* Timeline Animations
-*****************/
-$('.content').each( function(i){
-  
-  var bottom_of_object= $(this).offset().top + $(this).outerHeight();
-  var bottom_of_window = $(window).height();
-  
-  if( bottom_of_object > bottom_of_window){
-    $(this).addClass('hidden');
-  }
-});
-
-$(window).scroll( function(){
-    /* Check the location of each element hidden */
-    $('.hidden').each( function(i){
-      
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-        /* If the object is completely visible in the window, fadeIn it */
-        if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},700);
-        }
-    });
-});
-
-
-/*****************
-* Particle Animation
-*****************/
-particlesJS.load('particles-js', '../assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
-/*****************
 * Parallax Banner Animation
 *****************/
+function EasyPeasyParallaxInit() {
+   $(".fadeinstay").css({'opacity': 1});
+}
+
 function EasyPeasyParallax() {
   scrollPos = $(this).scrollTop();
   var windowBottom = $(this).scrollTop() + $(this).innerHeight();
   var windowTop = $(this).scrollTop() + $(this).innerHeight() - $(window).height();
   $(".EP-fade").each(function() {
-      $(this).css({ 'opacity': 1 - (scrollPos/125) });
+      $(this).css({ 'opacity': 1 - (scrollPos/200) });
   });
-
-
-
 
   $('.EP-stay-015').css({
-    'opacity': 0.15 + ((scrollPos)/300) 
+    'opacity': 0.4 + ((scrollPos)/300) 
   });
-    $('.EP-stay-015-quick').css({
+  
+  $('.EP-stay-015-quick').css({
     'opacity': 0.15 + ((scrollPos)/50) 
   });
   
@@ -193,14 +222,142 @@ function EasyPeasyParallax() {
 }
 
 $(document).ready(function(){
+  EasyPeasyParallaxInit();
   EasyPeasyParallax();
   $(window).scroll(function() {
     EasyPeasyParallax();
   });
 });
 
+  
+/*****************
+* Darkmode Switch animations
+*****************/
+gsap.set("#moon, .star", {opacity: 0});
+gsap.set("#sun, #cloud, #moon", {x: 15});
+gsap.set(".star", {x: 35, y: -5});
+
+
+$("#day").click(function(){
+  gsap.to("#sun", 1, {x: -157, opacity: 0, ease: Power1.easeInOut});
+  gsap.to("#cloud", .5, {opacity: 0, ease: Power1.easeInOut});
+  gsap.to("#moon", 1, {x: -157, rotate: -360, transformOrigin: "center", opacity: 1, ease: Power1.easeInOut});
+  gsap.to(".star", .5, {opacity: 1, ease: Power1.easeInOut});
+  gsap.to("#night", 1, {background: "#224f6d", borderColor: "#cad4d8", ease: Power1.easeInOut});
+  $(this).css({"pointer-events": "none"});
+  document.documentElement.setAttribute("data-theme", "dark");
+  sessionStorage.setItem("dark", "true");
+  setTimeout(function(){
+    $("#night").css({"pointer-events": "all"})
+  }, 1000);
+
+});
+
+$("#night").click(function(){
+  gsap.to("#sun", 1, {x: 15, opacity: 1, ease: Power1.easeInOut});
+  gsap.to("#cloud", 1, {opacity: 1, ease: Power1.easeInOut});
+  gsap.to("#moon", 1, {opacity: 0, x: 35, rotate: 360, transformOrigin: "center", ease: Power1.easeInOut});
+  gsap.to(".star", 1, {opacity: 0, ease: Power1.easeInOut});
+  gsap.to("#night", 1, {background: "#9cd6ef", borderColor: "#65c0e7", ease: Power1.easeInOut});
+  $(this).css({"pointer-events": "none"});
+  document.documentElement.setAttribute("data-theme", "light");
+  sessionStorage.setItem("dark", "false");
+  setTimeout(function(){
+    $("#day").css({"pointer-events": "all"})
+  }, 1000);
+
+});
+
+/* Preset Darkmode */
+$(document).ready(function(){
+  if (sessionStorage.getItem('dark') == "false"){
+    document.documentElement.setAttribute("data-theme", "light");
+} else {
+   setTimeout(function () {
+     document.getElementById("day").click();
+   }, 500);
+}
+});
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+var modalwrap = document.getElementById("modal-wrapper");
+
+// Get the button that opens the modal
+var modalbtn = document.getElementById("mymodalBtn");
+
+// Get the <span> element that closes the modal
+var modalspan = document.getElementsByClassName("modalclose")[0];
+
+// When the user clicks the button, open the modal 
+modalbtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+modalspan.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalwrap) {
+    modal.style.display = "none";
+  }
+}
 
 
 
- 
+$(document).ready(function () {
+  // Test for placeholder support
+  $.support.placeholder = (function () {
+    var i = document.createElement("input");
+    return "placeholder" in i;
+  })();
+
+  // Hide labels by default if placeholders are supported
+  if ($.support.placeholder) {
+    $(".form-label").each(function () {
+      $(this).addClass("js-hide-label");
+    });
+
+    // Code for adding/removing classes here
+    $(".form-group")
+      .find("input, textarea")
+      .on("keyup blur focus", function (e) {
+        // Cache our selectors
+        var $this = $(this),
+          $label = $this.parent().find("label");
+
+        switch (e.type) {
+          case "keyup":
+            {
+              $label.toggleClass("js-hide-label", $this.val() == "");
+            }
+            break;
+          case "blur":
+            {
+              if ($this.val() == "") {
+                $label.addClass("js-hide-label");
+              } else {
+                $label
+                  .removeClass("js-hide-label")
+                  .addClass("js-unhighlight-label");
+              }
+            }
+            break;
+          case "focus":
+            {
+              if ($this.val() !== "") {
+                $label.removeClass("js-unhighlight-label");
+              }
+            }
+            break;
+          default:
+            break;
+        }
+      });
+  }
+});
 

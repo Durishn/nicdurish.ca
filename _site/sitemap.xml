@@ -11,53 +11,16 @@
     
   
     
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
     <url>
       <loc>http://localhost:4000/</loc>
       
-        <lastmod>2021-01-30T04:18:29-05:00</lastmod>
+        <lastmod>2021-02-10T03:31:11-05:00</lastmod>
       
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
     </url>
     
   
-    
-  
-    
-  
-    
-  
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/resume/</loc>
-      
-        <lastmod>2021-01-30T04:18:29-05:00</lastmod>
-      
-      <changefreq>monthly</changefreq>
-      <priority>0.3</priority>
-    </url>
     
   
     

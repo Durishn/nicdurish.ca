@@ -1,0 +1,303 @@
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(10.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(10.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(6.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.contact-content{
+    .form-wrapper{
+        border-right: rgba(var(--color-splash-secondary2), 1) solid 1px;
+        padding: 0 2%;
+    }
+
+    .social-links-wrapper{
+        display:flex;
+        align-items: center;
+    }
+    
+    .social-links{display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    }
+    .privacy-statement{
+        font-size: 0.8em;
+        line-height: 1.5em;
+        padding: 1em 0;
+        color: rgba(var(--color-splash-txt),0.5);
+        text-align: center;
+        border-top: rgba(var(--color-splash-txt), 0.1) solid 1px;
+        
+    }
+    #mymodalBtn:hover{
+        color: rgba(var(--color-splash-txt), 1)
+    }
+}
+
+@media (max-width: $breakpoint) {
+    .contact-content {
+        .form-wrapper{
+            border-right: none;
+        }
+        .social-links{
+            text-align: center;
+        }
+    }
+}
+
+.privacy-policy{
+    li{
+            list-style: unset;
+    margin-left: 20px;
+    }
+    h2{
+        margin-top: 1em;
+    }
+    h3{
+        font-size:150%;
+        margin-top: 0.5em;
+    }
+}
+
+
+.social-links {
+    
+  a, span {
+	text-decoration: none;
+    margin-bottom:1em;
+	color: rgba(var(--color-splash-txt), 0.5);
+
+	span {
+		text-decoration: none;
+        font-size:140%;
+        transform: translate(0, 0.1em);
+		margin: 10px;
+	}
+  }
+    a:hover, a:focus {
+      color: rgba(var(--color-splash-txt), 1);
+      cursor: pointer;
+      span{      color: rgba(var(--color-splash-txt), 1);
+      cursor: pointer;}
+    }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+    #modal-wrapper{
+        margin: 4em;
+        padding-top: 5vh; /* Location of the box */
+    }
+
+    /* Modal Content */
+    .modal-content {
+    background-color: #fefefe;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    max-width: 720px;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    }
+
+    /* The Close Button */
+    .modalclose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .modalclose:hover,
+    .modalclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+}
+
+.contact-form{
+    max-width: 600px;
+    margin: auto;
+    .form-group{
+        padding-bottom:1em;
+        textarea, input {
+            resize: none;
+            background-color: rgba(0,0,0,0) !important;
+        }
+
+        .form-label {
+            color: rgba(var(--color-splash-secondary2), 1);
+            margin: 0;
+            display: block;
+            opacity: 1;
+            -webkit-transition: 1s ease all;
+            transition: 1s ease all;
+        }
+        .form-control {
+            border-radius: 0;
+            border-color: rgba(var(--color-splash-txt), 0.6);
+            color: rgba(var(--color-splash-txt), 1);
+            -webkit-text-fill-color: rgba(var(--color-splash-txt), 1);
+            -webkit-box-shadow: 0 0 0px 1000px rgba(var(--color-splash-background),0.5) inset;
+            border-width: 0 0 2px 0;
+            border-style: none none solid none;
+            box-shadow: none;
+            padding-bottom: 0.5em;
+            width: 100%;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: rgba(var(--color-splash-secondary2), 1);
+        }
+        .form-control:-internal-autofill-selected, .form-control:-webkit-autofill,
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            -webkit-text-fill-color: rgba(var(--color-splash-txt), 1);
+            -webkit-box-shadow: none;
+            transition: background-color 500000000s ease-in-out 0s
+        }
+        .js-hide-label {
+            opacity: 0; 	
+        }
+        .js-unhighlight-label {
+            color: rgba(var(--color-splash-txt), 0.6); 
+        }
+
+        &.privacy-label{
+            color:rgba(var(--color-splash-txt), 0.5);
+            padding: 2em 1em;
+        }
+    }
+    .button-container{
+        padding: 0;
+        button{
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------*/
+/*	07) ARLO SERVICES
+/*---------------------------------------------------*/
+
+.arlo_tm_services{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+
+    .service_inner{
+        width: 100%;
+        height: auto;
+        clear: both;
+        float: left;
+        padding-top: 2em;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            li{
+                margin: 0px 0px 50px 0px;
+                float: left;
+                max-width: 400px;
+                padding: 1em;
+
+                .inner{
+                    width: 100%;
+                    height: auto;
+                    clear: both;
+                    float: left;
+                    position: relative;
+                    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+                    padding: 40px 50px;
+                    background-color: rgba(0,0,0, 0.15);
+                    backdrop-filter: blur(5px);
+                    border: rgba(var(--color-splash-secondary2), 0.5) solid 0.1px;
+                    top: 0px;
+
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    
+                    -webkit-transition: all .3s ease;
+                    -moz-transition: all .3s ease;
+                        -ms-transition: all .3s ease;
+                        -o-transition: all .3s ease;
+                            transition: all .3s ease;
+
+                    &:hover{top: -3px;}
+
+                    .svg, span{
+                        width: 45px;
+                        height: 45px;
+                        font-size: 2em;
+                        color: rgba(var(--color-splash-secondary2), 0.85);
+                    }
+
+                    h3{
+                        font-size: 135%;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-size:1em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-	{% include head.html %}
-	<body class="fixedheader-body">
-  		{% include header.html %}
-  		<div class="fixed-nav-div"></div>
+---
+layout: default
+---
 
-    	{{ content }}
+<body class="fixedheader-body">
+    {% include nav-aux.html %}
+    <div class="fixed-nav-div"></div>
 
-	</body>
+    {{ content }}
 
-</html>
+</body>
 
 <script>
-  $(".nav").each(function() {
-    $(this).addClass("fixed-nav");
+    $(".nav").each(function () {
+        $(this).addClass("fixed-nav");
     });
 </script>

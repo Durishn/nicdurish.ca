@@ -1,6 +1,0 @@
-<figure class="post-img-fig" style="float:{{ include.direction }}; width:{{ include.width }}; max-width:{{ include.max-width }}; {% if include.direction contains 'center'%} margin: 0 auto; {% endif %}">
-  <img class="post-img" src="{{ include.url }}" alt="{{ include.description }}">
-  {% if include.figcap contains 'true'%} 
-    <figcaption class="post-img-cap">{{ include.description }}</figcaption>
-  {% endif %}
-</figure>

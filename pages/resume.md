@@ -1,9 +1,9 @@
 ---
 layout: fullpdf
 title: Resume
-subtitle: "Nic Durish - Curriculum Vitae"
+subtitle: "Nic Durish - Resume"
 permalink: /resume/
 pdflink: "/img/files/DurishN_Resume.pdf"
 sitemap:
-  exclude: 'no'
+  exclude: 'yes'
 ---

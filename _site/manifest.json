@@ -1,0 +1,16 @@
+{
+    "name": "Nic Durish",
+    "short_name": "Nic",
+    "theme_color": "{{ site.color }}",
+    "background_color": "{{ site.color }}",
+    "start_url": "{{ site.url }}",
+    "icons": [],
+
+    "lang": "{{ site.language }}",
+    "dir": "{{ site.lang_direction }}",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    
+    "splash_pages": null
+}

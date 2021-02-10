@@ -1,0 +1,136 @@
+/*************
+Post Layouts
+**************/
+.page-div.post {
+  background-color: $page-div-background;
+}
+
+.post-content-div.page-content {
+  padding-top: 1.5em;
+  max-width: 850px;
+  text-align: left;
+  padding-bottom: 5rem;
+}
+
+.post-title {
+  color: $post-title;
+  font-size: 2.4em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.post-subtitle {
+  color: $post-header;
+  font-size: 1em;
+  font-weight: 350;
+  margin: 10px 0 0;
+  line-height: calc(0.7vw + 12px);
+}
+
+.post-details {
+  color: $post-header;
+  opacity: 0.9;
+  font-size: 0.8em;
+  margin: 20px 0 0;
+  line-height: calc(0.7vw + 12px);
+
+  a {
+    color: $post-header;
+  }
+
+  a:hover {
+    color: var(--color-red-dull);
+  }
+}
+
+.post-contents {
+  overflow: hidden;
+
+  p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    -webkit-font-smoothing: auto;
+    line-height: 1.6rem;
+    text-align: left;
+    color: $post-text;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 1em 0 0.1em;
+    color: darken($post-text, 10%);
+  }
+
+  p {
+    margin-top: 0.3em;
+  }
+
+  li {
+    font-size: 0.95rem;
+    font-weight: 400;
+    -webkit-font-smoothing: auto;
+    line-height: 1.6rem;
+    text-align: left;
+    color: #55585a;
+  }
+
+  blockquote {
+    position: relative;
+    font-style: italic;
+
+    &:before {
+      content: '\201C';
+      position: absolute;
+      top: -0.25em;
+      left: -0.3em;
+      color: #000;
+      font-size: 6em;
+      z-index: 0;
+      opacity: 0.1;
+    }
+  }
+
+  code {
+    font-size: 0.9rem;
+    color: darken($post-text, 10%);
+    background-color: #edf5fb;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+
+  .highlight {
+    border-radius: 10px;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+  }
+
+  .highlight pre {
+    margin: 0;
+  }
+
+  .highlight pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.post-img-fig {
+  margin: 15px;
+  min-width: 180px;
+
+  .post-img {
+    width: 100%;
+  }
+
+  .post-img-cap {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 400;
+    -webkit-font-smoothing: auto;
+    line-height: 1.6rem;
+    color: $post-text;
+  }
+}

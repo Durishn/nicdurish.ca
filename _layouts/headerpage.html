@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<body class="default-body"  style="background:rgba(var(--color-splash-background), 1);">
+    {% include nav-aux.html %}
+    <div id="content" role="main">
+        
+        <div class="banner-div {{ page.divsize }}">
+            <div class="banner"
+                style="background: url({{page.banner}}) no-repeat fixed 55% 0%; position: fixed; background-size: cover; height: 100%; width: 100%; opacity: 0.5;">
+                <div class="fixedbg bg1" aria-label="Moving Background" id="particles-js"></div>
+            </div>
+            <div class="page-content">
+                <div class="bannertext-div {{page.divside}} EP-fade-stay">
+                    <div id="bannertext-container">
+                        <h1 class="banner-title">{{page.title}}</h1>
+                        <p class="banner-text">{{page.subtitle}}</p>
+                    </div>
+                </div>
+            </div>
+            <span class="scroll-down-arrow shortbann scrollvanish"></span>
+        </div>
+
+        <div class="page-div" style="min-height:80vh">
+            <section class="page-content {{page.customWrapperClass}}">
+                {{ content }}
+            </section>
+        </div>
+
+        {% include footer.html %}
+        {% include tail.html %}
+    </div>
+</body>
+
+		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script src="../js/particles.js" ></script>

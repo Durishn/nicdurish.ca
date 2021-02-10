@@ -1,0 +1,51 @@
+<!-- NAV -->
+<nav class="nav">
+
+<!-- Skip to content
+<a role='navigation' aria-label='Skip to content' class='screenreader' href='#content' style='scroll-behavior: smooth; color: white !important;'>Skip to main content</a>
+-->
+
+<!-- Logo to Homepage-->
+  <!-- <div class="logo">
+    <a aria-label="Go Home" href="{{ site.baseurl }}/" class="navbar-brand">
+      <svg width="55px" height:"55px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538.6 538.6"><path class="st0" d="M477 269.3c0 114.7-93 207.7-207.7 207.7 -114.7 0-207.7-93-207.7-207.7h17.5c0 104.9 85.3 190.2 190.2 190.2s190.2-85.3 190.2-190.2S374.2 79.1 269.3 79.1V61.6C384 61.6 477 154.6 477 269.3z"/><path class="st0" d="M428.5 110.1C386 67.5 329.4 44.1 269.3 44.1v35c104.9 0 190.2 85.3 190.2 190.2s-85.3 190.2-190.2 190.2S79.1 374.2 79.1 269.3h-35c0 60.2 23.4 116.7 66 159.2 42.5 42.5 99.1 66 159.2 66s116.7-23.4 159.2-66c42.5-42.5 66-99.1 66-159.2S471.1 152.6 428.5 110.1z"/><line class="st1" x1="269.3" y1="61.6" x2="269.3" y2="477"/><line class="st1" x1="61.6" y1="269.3" x2="61.6" y2="61.6"/><line class="st1" x1="269.3" y1="477" x2="61.6" y2="61.6"/></svg>
+    </a>
+  </div> -->
+<a href="{{ site.baseurl }}{% if page.url contains '/resume/' or page.path contains "resume/" or page.url contains '/cv/' or page.path contains "cv/" %}/#about{%else%}/#portfolio{%endif%}" class="nav-link" style="
+    float: left;
+    padding-left: 2em;
+    text-decoration: none;
+">← HOME</a>
+
+
+<!-- Main Navigation-->
+  <div id="mainListDiv" class="main_list">
+    <ul class="navlinks">
+
+      <!-- Resume -->
+      {% if page.url contains '/resume/' or page.path contains "resume/" or page.url contains '/cv/' or page.path contains "cv/" %}
+      <li {% if page.url contains '/resume/' or page.path contains "resume/"%} id="current" {% endif %} class="nav-item">
+        <a href="{{ site.baseurl }}/resume/" class="nav-link">RÉSUMÉ</a>
+      </li>
+
+      <!-- Resume -->
+      <li {% if page.url contains '/cv/' or page.path contains "cv/"%} id="current" {% endif %} class="nav-item">
+        <a href="{{ site.baseurl }}/cv/" class="nav-link">C.V.</a>
+      </li>
+      {%endif%}
+
+      <!-- Blog
+      <li class="nav-item">
+        <a href="//blog.nicdurish.ca" class="nav-link">BLOG ⤻</a>
+      </li> -->
+
+    </ul>
+  </div>
+  <div class="dmswitch-wrapper">
+        <div class="darkmode-switch">
+        <div id="day"></div>
+        <div id="night"></div>
+        {% include svg/darkmode.svg %}
+      </div>
+      </div>
+</nav>

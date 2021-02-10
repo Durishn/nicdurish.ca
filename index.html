@@ -1,35 +1,40 @@
 ---
+layout: default
+id: index
 sitemap:
   exclude: 'no'
 ---
-<!DOCTYPE html>
-<html lang="en">
-    {% include head.html %}
-    <div aria-label="Moving Background" id="particles-js"></div>
-    <body class="index-body">
-  		<div class="fade-in-wait-3s">{% include header.html %}</div>
-			<div id="content" role="main" style="height:100vh; width:100vw;">
-				<div class="index-center-div EP-fade EP-displaynone">
-				    <h1 class="row fade-in-3s">
-				        <span class="index-title thin">Nic</span> <span class="index-title thick"><strong>Durish</strong></span>
-				    </h1>
+    <body class="index-body"  style="background:rgba(var(--color-splash-background), 1);">
 
-				    <div class="row index-spacer1"></div>
-				    <div class="row fade-in-5s">
-				    	<h2 class="index-subtitle">Developer &nbsp; · &nbsp; Designer &nbsp; · &nbsp; Integrator</h2>
-				    </div>
+		<!-- Include Preloader -->
+		<div role="complementary" id="preloader" class="displaynone">
+			<div class="spinner_wrap"><img alt="Site Logo" src="img/svg/logo.svg" class="spinner "></img></div>
+		</div>
 
-				    <div class="row index-spacer2"></div>
-				    <div class="row fade-in-wait-3s">
-				        <div class="col social-links-container" style="opacity:0.9; width: 80%; margin: auto;">
-				          {% if site.show_social_icons %}
-				            {% include social_links.html %}
-				          {% endif %}
-				        </div>
-			      	</div>
-				</div>
-			</div>
+		{% include navigation.html %}
 
+		<div id="content" class="content-wrapper" data-background-color="rgba(var(--color-splash-background), 1)">
+
+			{% include sections/splash.html %}
+			{% include sections/about.html %}
+			{% include sections/services.html %}
+			{% include sections/contact.html %}
+
+			{% include footer.html %}
+			{% include tail.html %}
+		</div>
 	</body>
+		<!-- Necessary Libaries -->
+		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script src="../js/particles.js" ></script>
 
-</html>
+		<script src="../js/three.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.3/paper-full.min.js"></script>
+		<script src="../js/backgrounds.js"></script>
+		<script src="../js/preloader.js"></script>
+		<script src="../js/typed.js"></script>
+		
+
+
+
+	
