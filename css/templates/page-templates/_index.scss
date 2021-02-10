@@ -120,18 +120,13 @@ Index Layout
         }
       }
     }
-    .sec-content-holder{
-      a:hover{
-        color: rgba(var(--color-splash-secondary2), 1);
-      }
-      
-    }
+
     p{
       font-size: 120%;
       padding: 1.5% 0;
       color: rgba(var(--color-splash-txt), 1);
     }
-    a, a:visited{color: rgba(var(--color-splash-txt), 1);}
+
   }
 }
 
