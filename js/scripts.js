@@ -280,27 +280,22 @@ $(document).ready(function(){
 });
 
 
-// Get the modal
+/*****************
+* Modal
+*****************/
 var modal = document.getElementById("myModal");
 var modalwrap = document.getElementById("modal-wrapper");
-
-// Get the button that opens the modal
 var modalbtn = document.getElementById("mymodalBtn");
-
-// Get the <span> element that closes the modal
 var modalspan = document.getElementsByClassName("modalclose")[0];
 
-// When the user clicks the button, open the modal 
 modalbtn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
 modalspan.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modalwrap) {
     modal.style.display = "none";
@@ -308,25 +303,23 @@ window.onclick = function(event) {
 }
 
 
-
+/*****************
+* Form, allow label to 'show up'
+*****************/
 $(document).ready(function () {
-  // Test for placeholder support
   $.support.placeholder = (function () {
     var i = document.createElement("input");
     return "placeholder" in i;
   })();
 
-  // Hide labels by default if placeholders are supported
   if ($.support.placeholder) {
     $(".form-label").each(function () {
       $(this).addClass("js-hide-label");
     });
 
-    // Code for adding/removing classes here
     $(".form-group")
       .find("input, textarea")
       .on("keyup blur focus", function (e) {
-        // Cache our selectors
         var $this = $(this),
           $label = $this.parent().find("label");
 

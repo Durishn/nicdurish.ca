@@ -1,3 +1,10 @@
+// ===============================
+// THIS FILE WAS NOT THE ORIGINAL IP OF NIC DURISH. 
+// IT HAS BEEN MODIFIED
+// ORIGINAL AUTHOR    : Matt Boldt
+// URL                : https://github.com/mattboldt/typed.js/
+// ===============================
+
 var typeWrite = function(el, toRotate, period, delay = 1000, loop = 'true') {
         this.toRotate = toRotate;
         this.el = el;

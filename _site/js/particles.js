@@ -1,3 +1,10 @@
+// ===============================
+// THIS FILE WAS NOT THE ORIGINAL IP OF NIC DURISH. 
+// IT HAS BEEN MODIFIED
+// ORIGINAL AUTHOR    : Vincent Garreau
+// URL                : https://github.com/VincentGarreau/particles.js/
+// ===============================
+
 particlesJS("particles-js", {
   particles: {
     number: { value: 150, density: { enable: true, value_area: 800 } },

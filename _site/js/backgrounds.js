@@ -1,4 +1,9 @@
-
+// ===============================
+// THIS FILE WAS NOT THE ORIGINAL IP OF NIC DURISH. 
+// IT HAS BEEN MODIFIED
+// ORIGINAL AUTHOR    : Mamboleo
+// URL                : https://github.com/Mamboleoo/DecorativeBackgrounds
+// ===============================
 
 /*****************
  * Wiggly Canvas
