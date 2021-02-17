@@ -163,6 +163,10 @@ Index Layout
       border: none;
       background-color: rgba(var(--color-splash-secondary2), 0.5);
     }
+    .shadowed {
+    -webkit-filter: drop-shadow(20px 0px 20px rgba(254, 48, 121,0.1));
+    filter: drop-shadow(20px 0px 20px rgba(254, 48, 121,0.1));
+}
   }
 
 }
