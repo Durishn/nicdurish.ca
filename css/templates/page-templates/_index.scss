@@ -144,6 +144,27 @@ Index Layout
       }
     }
   }
+
+  .profilewrapper{
+    padding:0 2em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:-3em;
+    .profilepng{
+      max-width: 440px;
+      opacity: 0.9;
+    }
+    hr{
+      margin:0;
+      height: 1px;
+      width: 70%;
+      border: none;
+      background-color: rgba(var(--color-splash-secondary2), 0.5);
+    }
+  }
+
 }
 
 
@@ -160,6 +181,7 @@ Index Layout
     width: calc(100% - 100px);
     }
   }
+    #about .profilewrapper{margin-top:0;}
 }
 
 @media (max-width: $breakpoint) {
@@ -179,6 +201,7 @@ Index Layout
     padding-top: 20%
   }
   }
+
 }
 
 
