@@ -154,7 +154,9 @@ Index Layout
     margin-top:-3em;
     .profilepng{
       max-width: 440px;
-      opacity: 0.9;
+      opacity: 0.9;      
+      -webkit-filter: drop-shadow(20px 0px 20px rgba(254, 48, 121,0.1));
+      filter: drop-shadow(20px 0px 20px rgba(254, 48, 121,0.1));
     }
     hr{
       margin:0;
@@ -163,10 +165,6 @@ Index Layout
       border: none;
       background-color: rgba(var(--color-splash-secondary2), 0.5);
     }
-    .shadowed {
-    -webkit-filter: drop-shadow(20px 0px 20px rgba(254, 48, 121,0.1));
-    filter: drop-shadow(20px 0px 20px rgba(254, 48, 121,0.1));
-}
   }
 
 }
