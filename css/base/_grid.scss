@@ -15,12 +15,12 @@
 
 @media (max-width: $big_breakpoint) {
   .gr-md-6-4{
-  grid-template-columns: 48% 4%  48%;
+  grid-template-columns: 100% 0% 0%;
 }
 }
 
 @media (max-width: $breakpoint) {
-    .gr-md-even-2, .gr-md-6-4, .gr-md-7-3{
+    .gr-md-even-2, .gr-md-7-3{
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }

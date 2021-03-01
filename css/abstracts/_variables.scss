@@ -2,7 +2,7 @@
 * BASE SETTINGS
 ****************************/
 // $fontmain: calc(14px + (6) * ((100vw - 300px) / (1600 - 300)));
-$fontmain: calc(14px + 0.15vw);
+$fontmain: calc(12px + 0.15vw);
 $linemain: 1.85em;
 $font5: calc(0.5vw + 23px);
 
@@ -15,8 +15,8 @@ $font5: calc(0.5vw + 23px);
 /***************************
 * SCHEME CODES
 ****************************/
-$big_breakpoint: 1400px;
-$breakpoint: 900px;
+$big_breakpoint: 1050px;
+$breakpoint: 800px;
 $small_breakpoint: 600px;
 
 
