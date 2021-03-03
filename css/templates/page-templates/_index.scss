@@ -139,7 +139,7 @@ Index Layout
         color: rgba(var(--color-splash-txt), 1);
         text-decoration: none;
       }
-      &:hover span{
+      &:hover, &:focus, &:hover span, &:focus span{
         color: rgba(var(--color-splash-secondary2), 1);
       }
     }
