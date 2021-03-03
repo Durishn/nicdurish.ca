@@ -42,27 +42,27 @@ twitter_username: durishn
 our_services:
   - name: "Full-stack Web Development"
     image: "fas fa-code"
-    description: "LAMP stacks, MEAN stacks, and JAMstacks. Oh My! From the frontend to the backend tools to the database, and everything in-between."
+    description: "LAMP stacks, MERN stacks, and JAMstacks. Oh My! From the frontend, to the backend, to the database, and everything in-between."
 
   - name: 'Digital Product Design'
     image: 'fas fa-drafting-compass'
-    description: "Clean, simple, and modern designs - optimized for performance, maintainability, and convertings users to customers."
+    description: "Clean, simple, and modern designs - optimized for responsiveness, performance, maintainability, and convertings users to customers."
 
   - name: 'Consultancy & Training'
     image: 'fas fa-chart-pie'
-    description: 'Get the extra push your project needs. I provide on or off-site training, consultation, and management to any projects large or small'
+    description: 'Need some extra support to guide your development? I provide on or off-site consultations, training, and/or management on projects'
 
   - name: 'Analytics & Audits'
     image: 'fas fa-chart-pie'
-    description: 'Get insights into your web product so that you can improve performance, SEO, click-through and ultimately make smarter business decisions.'
+    description: 'Get insights into your web product to improve performance, SEO, click-through and ultimately make smarter business decisions.'
 
   - name: 'Service Integration'
     image: 'fas fa-cogs'
-    description: 'Get your product integrated with external servers, services, APIs, content management systems and databases. Or have some tailor-made!'
+    description: 'Get your product integrated with external services, APIs, Content Management Systems or databases. Or have some tailor-made!'
 
   - name: 'Accessibility & Usability'
     image: 'fas fa-universal-access'
-    description: "Don't just be WCAG-compliant, elevate your product or service to new levels by prioritizing accessibility to all of your users across all platforms."
+    description: "Don't just be AODA or WCAG compliant - bring your product or service to new levels by prioritizing accessibility to all users across all platforms."
 
 
 # Google Analytics
