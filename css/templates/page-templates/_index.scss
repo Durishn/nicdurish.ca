@@ -183,8 +183,11 @@ Index Layout
     width: calc(100% - 100px);
     }
   }
-    #about .profilewrapper{margin-top:0;    width: 50%;
-    margin: auto;}
+    #about .profilewrapper{
+      margin-top:0;    
+      width: 50%;
+      margin: auto;
+      display: none}
 }
 
 @media (max-width: $breakpoint) {
